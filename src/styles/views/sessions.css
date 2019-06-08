@@ -1,0 +1,16 @@
+.sessions {
+  display: flex;
+  justify-content: center;
+}
+.sessions .list-group {
+  width: 70%;
+}
+
+.sessions p {
+  font-size: 17px;
+}
+
+.sessions .list-group-header {
+  margin-bottom: 30px;
+  text-align: center;
+}

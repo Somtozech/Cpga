@@ -1,0 +1,13 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  font: menu;
+  padding: 0;
+  box-sizing: border-box;
+}

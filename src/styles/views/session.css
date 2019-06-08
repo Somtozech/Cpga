@@ -1,0 +1,7 @@
+.session {
+  min-height: 100vh;
+}
+
+.session .nav-group .nav-group-item {
+  padding: 20px 10px;
+}

@@ -1,0 +1,45 @@
+/* BASE - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+@import 'base/normalize.css';
+
+/* Components 
+========================================================================== */
+@import 'components/header.css';
+@import 'components/computeResult.css';
+
+/* Views 
+========================================================================== */
+@import 'views/session.css';
+@import 'views/sessions.css';
+@import 'views/createSession.css';
+@import 'views/compute.css';
+
+html {
+  overflow-y: auto;
+}
+.mx-2 {
+  margin: 0px 4px;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+.d-flex {
+  display: flex;
+  width: 100%;
+}
+
+.flex {
+  flex: 1;
+  width: 50%;
+}
+
+.rotate-text {
+  transform: rotate(-90deg);
+}
+
+.text-center {
+  text-align: center;
+}
