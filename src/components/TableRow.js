@@ -27,7 +27,6 @@ function TableRow({ year }) {
       </tr>
       <React.Fragment>
         {arr.map((f, i) => {
-          console.log(f);
           const first = year['first'][i] || {
             code: '',
             title: '',
