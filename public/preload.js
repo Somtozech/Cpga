@@ -1,3 +1,11 @@
 window.ipcRenderer = require('electron').ipcRenderer;
 
-window.remote = require('electron').remote;
+const remote = require('electron').remote;
+
+const helpers = remote.require('./electron');
+
+window.createSession = helpers.createSession;
+
+window.getSessions = helpers.getSessions;
+
+window.addStudentToSession = helpers.addStudentToSession;

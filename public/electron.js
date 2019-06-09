@@ -1,6 +1,8 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 
 const isDev = require('electron-is-dev');
+
+const dataStore = require('./utils/database');
 
 let mainWindow;
 
@@ -24,4 +26,31 @@ const createWindow = () => {
 
 app.on('ready', () => {
   createWindow();
+});
+
+/**
+ * Adds a session to the dataStore
+ * @param {String} session - session
+ */
+const createSession = (exports.createSession = session => {
+  dataStore.addSession(session);
+});
+
+/**
+ * Returns the dataStore current state
+ */
+const getSessions = (exports.getSessions = () => {
+  return dataStore.db.getState();
+});
+
+/**
+ * Adds a student to a session in the dataStore
+ * @param {String} session - Session to add Student
+ * @param {Object} student - student details
+ */
+const addStudentToSession = (exports.addStudentToSession = (
+  session,
+  student
+) => {
+  dataStore.addStudentToSession(session, student);
 });

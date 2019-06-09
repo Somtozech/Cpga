@@ -43,3 +43,9 @@ a {
 .text-center {
   text-align: center;
 }
+
+button:disabled {
+  color: #5a5858;
+  border: 0;
+  background: #d4d1d1;
+}

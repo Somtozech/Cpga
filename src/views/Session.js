@@ -10,6 +10,8 @@ import StudentsList from '../components/StudentsList';
 function SessionPage(props) {
   const url = props.match.url;
 
+  const params = props.match.params;
+
   return (
     <div className="session window-content">
       <div className="window-content">
@@ -18,7 +20,11 @@ function SessionPage(props) {
           <div className="pane">
             <div className="padded-more">
               <Router history={props.history}>
-                <Route exact path={`${url}/`} component={ComputeResult} />
+                <Route
+                  exact
+                  path={`${url}/`}
+                  render={props => <ComputeResult {...props} params={params} />}
+                />
                 <Route path={`${url}/upload`} component={UploadCourse} />
                 <Route path={`${url}/courses`} component={CourseList} />
                 <Route path={`${url}/students`} component={StudentsList} />

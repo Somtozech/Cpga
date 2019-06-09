@@ -15,8 +15,12 @@ function AppRouter(props) {
         <Switch>
           <Route exact path="/" component={CreateSessionPage} />
           <Route exact path="/sessions" component={Sessions} />
-          <Route exact path="/session/compute" component={Compute} />
-          <Route path="/session" component={SessionPage} />
+          <Route
+            exact
+            path="/session/:session/:regNo/compute"
+            component={Compute}
+          />
+          <Route path="/session/:sessionId" component={SessionPage} />
         </Switch>
       </div>
     </Router>
