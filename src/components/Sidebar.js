@@ -35,7 +35,6 @@ function Sidebar({ match }) {
               ? match.url
               : match.url + '/';
           const s = r + route.path;
-          console.log(s);
           const className = `nav-group-item ${index === i ? 'active' : ''}`;
           return (
             <Link

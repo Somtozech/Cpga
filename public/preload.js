@@ -9,3 +9,5 @@ window.createSession = helpers.createSession;
 window.getSessions = helpers.getSessions;
 
 window.addStudentToSession = helpers.addStudentToSession;
+
+window.uploadCourse = helpers.uploadCourse;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useForm from '../utils/useForm';
 
 function ComputeResult(props) {
-  const session = props.params.sessionId;
+  const session = props.params.session;
   const form = useForm(
     { name: '', regNo: '', mode_of_entry: 'UTME', state: '' },
     () => {

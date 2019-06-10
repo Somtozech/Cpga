@@ -16,7 +16,7 @@ function SessionsPage() {
         </li>
         {Object.keys(sessions).map((session, i) => {
           return (
-            <li class="list-group-item" key={i}>
+            <li className="list-group-item" key={i}>
               <p>
                 <Link to={`/session/${session}`}>{session} session</Link>
               </p>

@@ -20,7 +20,7 @@ function AppRouter(props) {
             path="/session/:session/:regNo/compute"
             component={Compute}
           />
-          <Route path="/session/:sessionId" component={SessionPage} />
+          <Route path="/session/:session" component={SessionPage} />
         </Switch>
       </div>
     </Router>

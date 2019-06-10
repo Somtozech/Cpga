@@ -15,11 +15,28 @@ class Db {
     return this;
   }
 
+  /**
+   * Add a student to a session in the datastore
+   * @param {String} session - session
+   * @param {Object} student - student's object
+   */
   addStudentToSession(session, student) {
     student.session = [];
     this.db
       .get(session)
       .set(student.regNo, student)
+      .write();
+  }
+
+  /**
+   * Add an array of courses to a session
+   * @param {String} session
+   * @param {Array} courses
+   */
+  addCoursesToSession(session, courses) {
+    this.db
+      .get(session)
+      .set('session', courses)
       .write();
   }
 

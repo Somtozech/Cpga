@@ -1,20 +1,175 @@
 {
-  "2017-2018": {
-    "2015030171355": {
-      "mode_of_entry": "UTME",
-      "name": "Ezechi Nnaemeka",
-      "regNo": "2015030171355",
-      "state": "Enugu",
-      "session": []
-    }
-  },
   "2018-2019": {
-    "2015030171355": {
-      "name": "Ezechi Nnaemeka",
-      "regNo": "2015030171355",
-      "mode_of_entry": "UTME",
-      "state": "Enugu",
-      "session": []
-    }
+    "session": [
+      {
+        "id": "vjnA2HPZl",
+        "year": "year one",
+        "first": [
+          {
+            "id": "Xw9mNedfPj",
+            "code": "GST 101",
+            "title": "English and Technical Writing 1",
+            "unit": 2
+          },
+          {
+            "id": "uinuWG7nDb",
+            "code": "GST 103",
+            "title": "Nigerian people and culture",
+            "unit": 2
+          },
+          {
+            "id": "J6auxQvKDQ",
+            "code": "GST 105",
+            "title": "Introduction to Logic and Philosophy",
+            "unit": 2
+          },
+          {
+            "id": "4y6WdS_TFq",
+            "code": "ICH 101",
+            "title": "Chemistry 1",
+            "unit": 3
+          },
+          {
+            "id": "QqFR3cU1gK",
+            "code": "MAT 101",
+            "title": "Mathematics 1",
+            "unit": 3
+          },
+          {
+            "id": "fSHNukUZIe",
+            "code": "CHE 111",
+            "title": "Intro. to Chemical Process Computation",
+            "unit": 2
+          },
+          {
+            "id": "FOreFJor0K",
+            "code": "CEE 111",
+            "title": "Computer Programming & Language 1",
+            "unit": 2
+          }
+        ],
+        "second": [
+          {
+            "id": "X_ZoYYkxKd",
+            "code": "GST 104",
+            "title": "History & Philosophy of Science"
+          },
+          {
+            "id": "yshKJwJPQu",
+            "code": "GST 102",
+            "title": "English and Technical Writing 1"
+          },
+          {
+            "id": "rOO9TP31sR",
+            "code": "ICH 102",
+            "title": "Chemistry"
+          }
+        ]
+      },
+      {
+        "id": "9qFqNinXWm",
+        "year": "year two",
+        "first": [
+          {
+            "id": "S_oXfelnRC",
+            "code": "FEG 203",
+            "title": "Engineering Analysis III",
+            "unit": 3
+          },
+          {
+            "id": "QQ2Uk_9XfX",
+            "code": "MEC 211",
+            "title": "Engineering Drawing",
+            "unit": 2
+          }
+        ],
+        "second": [
+          {
+            "id": "qAxK_hCr3H",
+            "code": "FEG 204",
+            "title": "Engineering Analysis IV"
+          },
+          {
+            "id": "r9tn4WcQK9",
+            "code": "MEC 212",
+            "title": "Engineering Drawing II"
+          }
+        ]
+      },
+      {
+        "id": "_51QhEM6pU_",
+        "year": "year three",
+        "first": [
+          {
+            "id": "EzBgt-ySf-O",
+            "code": "EEE 393",
+            "title": "Practical",
+            "unit": 2
+          },
+          {
+            "id": "6UjVaVcWf2v",
+            "code": "EEE 325",
+            "title": "Physical Electronics",
+            "unit": 3
+          }
+        ],
+        "second": [
+          {
+            "id": "2yD8yDn5Dzn",
+            "code": "EEE 394",
+            "title": "Practical"
+          },
+          {
+            "id": "oMOzQ3LX52B",
+            "code": "EEE 326",
+            "title": "Electronic Devices & Circuit I"
+          }
+        ]
+      },
+      {
+        "id": "e8JBO7oIXzi",
+        "year": "year four",
+        "first": [
+          {
+            "id": "1Ws9Y-aSqFC",
+            "code": "EEE 427",
+            "title": "Electronics Devices and Circuit II",
+            "unit": 3
+          },
+          {
+            "id": "E8qPYspOuIi",
+            "code": "EEE 414",
+            "title": "Circuit Theory",
+            "unit": 3
+          }
+        ],
+        "second": [
+          {
+            "id": "WFYNe43Xd7Y",
+            "code": "IT",
+            "title": "Industrial Training"
+          }
+        ]
+      },
+      {
+        "id": "FG3a118GHe7",
+        "year": "year five",
+        "first": [
+          {
+            "id": "r-RauDadFrY",
+            "code": "EEE 598",
+            "title": "Seminar & Technical communication",
+            "unit": 2
+          }
+        ],
+        "second": [
+          {
+            "id": "ZyXXoysj1C9",
+            "code": "EEE 574",
+            "title": "Control System Engineering"
+          }
+        ]
+      }
+    ]
   }
 }

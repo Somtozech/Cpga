@@ -25,7 +25,10 @@ function SessionPage(props) {
                   path={`${url}/`}
                   render={props => <ComputeResult {...props} params={params} />}
                 />
-                <Route path={`${url}/upload`} component={UploadCourse} />
+                <Route
+                  path={`${url}/upload`}
+                  render={props => <UploadCourse {...props} params={params} />}
+                />
                 <Route path={`${url}/courses`} component={CourseList} />
                 <Route path={`${url}/students`} component={StudentsList} />
               </Router>

@@ -1,8 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
-
 const isDev = require('electron-is-dev');
 
 const dataStore = require('./utils/database');
+const uploadCourseToDataStore = require('./utils/uploadCourse');
 
 let mainWindow;
 
@@ -53,4 +53,12 @@ const addStudentToSession = (exports.addStudentToSession = (
   student
 ) => {
   dataStore.addStudentToSession(session, student);
+});
+
+/**
+ * upload course
+ * @param {String} session - session
+ */
+const uploadCourse = (exports.uploadCourse = session => {
+  uploadCourseToDataStore(mainWindow, session);
 });
