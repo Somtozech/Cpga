@@ -11,3 +11,7 @@ window.getSessions = helpers.getSessions;
 window.addStudentToSession = helpers.addStudentToSession;
 
 window.uploadCourse = helpers.uploadCourse;
+
+window.getCoursesInSession = helpers.getCoursesInSession;
+
+window.getStudentsInSession = helpers.getStudentsInSession;

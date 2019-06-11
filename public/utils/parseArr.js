@@ -30,14 +30,14 @@ function parseArr(arr) {
     const year = Object.keys(yearIndex)[i];
     const nextYear = Object.keys(yearIndex)[i + 1];
     let s = yearIndex[year] + 3;
-    let e = yearIndex[nextYear] ? yearIndex[nextYear] : arr.length - 1;
+    let e = yearIndex[nextYear] ? yearIndex[nextYear] : arr.length;
     const schoolYear = {
       id: shortid.generate(),
       year,
       first: [],
       second: []
     };
-    for (let j = s; j < e - 1; j++) {
+    for (let j = s; j < e; j++) {
       for (let g = 0; g < arr[j].length; g += 3) {
         if (g === 0 && arr[j][g]) {
           schoolYear.first.push({
@@ -52,7 +52,7 @@ function parseArr(arr) {
             id: shortid.generate(),
             code: arr[j][g],
             title: arr[j][g + 1],
-            unit: arr[j][g + 3]
+            unit: arr[j][g + 2]
           });
         }
       }

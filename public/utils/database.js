@@ -11,7 +11,7 @@ class Db {
   }
 
   addSession(session) {
-    this.db.set(session, {}).write();
+    this.db.set(session, { students: [], session: [] }).write();
     return this;
   }
 
@@ -22,9 +22,11 @@ class Db {
    */
   addStudentToSession(session, student) {
     student.session = [];
+    student.id = shortid.generate();
     this.db
       .get(session)
-      .set(student.regNo, student)
+      .get('students')
+      .push(student)
       .write();
   }
 
@@ -38,6 +40,21 @@ class Db {
       .get(session)
       .set('session', courses)
       .write();
+  }
+
+  //get session's courses for all levels/years
+  getCoursesInSession(session) {
+    return this.db
+      .get(session)
+      .get('session')
+      .value();
+  }
+
+  getStudentsInSession(session) {
+    return this.db
+      .get(session)
+      .get('students')
+      .value();
   }
 
   read() {

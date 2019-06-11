@@ -16,7 +16,7 @@ function SessionPage(props) {
     <div className="session window-content">
       <div className="window-content">
         <div className="pane-group">
-          <Sidebar match={props.match} />
+          <Sidebar match={props.match} history={props.history} />
           <div className="pane">
             <div className="padded-more">
               <Router history={props.history}>
@@ -29,8 +29,14 @@ function SessionPage(props) {
                   path={`${url}/upload`}
                   render={props => <UploadCourse {...props} params={params} />}
                 />
-                <Route path={`${url}/courses`} component={CourseList} />
-                <Route path={`${url}/students`} component={StudentsList} />
+                <Route
+                  path={`${url}/courses`}
+                  render={props => <CourseList {...props} params={params} />}
+                />
+                <Route
+                  path={`${url}/students`}
+                  render={props => <StudentsList {...props} params={params} />}
+                />
               </Router>
             </div>
           </div>

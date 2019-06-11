@@ -6,6 +6,8 @@
 ========================================================================== */
 @import 'components/header.css';
 @import 'components/computeResult.css';
+@import 'components/courseList.css';
+@import 'components/studentList.css';
 
 /* Views 
 ========================================================================== */
@@ -15,7 +17,7 @@
 @import 'views/compute.css';
 
 html {
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 .mx-2 {
   margin: 0px 4px;

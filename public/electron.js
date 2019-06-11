@@ -26,6 +26,7 @@ const createWindow = () => {
 
 app.on('ready', () => {
   createWindow();
+  getCoursesInSession('2018-2019');
 });
 
 /**
@@ -61,4 +62,13 @@ const addStudentToSession = (exports.addStudentToSession = (
  */
 const uploadCourse = (exports.uploadCourse = session => {
   uploadCourseToDataStore(mainWindow, session);
+});
+
+//get session courses for all levels
+const getCoursesInSession = (exports.getCoursesInSession = session => {
+  return dataStore.getCoursesInSession(session);
+});
+
+const getStudentsInSession = (exports.getStudentsInSession = session => {
+  return dataStore.getStudentsInSession(session);
 });

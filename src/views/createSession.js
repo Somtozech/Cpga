@@ -18,7 +18,7 @@ function CreateSessionPage(props) {
         <div className="form-group">
           <label htmlFor="">Session Start</label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             name="start"
             value={values.start}
@@ -29,7 +29,7 @@ function CreateSessionPage(props) {
         <div className="form-group">
           <label htmlFor="">Session End</label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             placeholder="2018"
             name="end"

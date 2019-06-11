@@ -24,8 +24,11 @@ const routes = [
   }
 ];
 
-function Sidebar({ match }) {
-  const [index, setIndex] = useState(0);
+function Sidebar({ match, history }) {
+  const pathname = history.location.pathname;
+  const linkIndex = pathname.lastIndexOf('/');
+  const len = -(pathname.length - linkIndex - 1);
+  const link = len ? pathname.slice(len) : '/';
   return (
     <div className="pane pane-sm sidebar">
       <nav className="nav-group">
@@ -35,15 +38,11 @@ function Sidebar({ match }) {
               ? match.url
               : match.url + '/';
           const s = r + route.path;
-          const className = `nav-group-item ${index === i ? 'active' : ''}`;
+          const path = route.path ? route.path : '/';
+
+          const className = `nav-group-item ${link === path ? 'active' : ''}`;
           return (
-            <Link
-              to={s}
-              key={i}
-              onClick={e => {
-                setIndex(i);
-              }}
-            >
+            <Link to={s} key={i}>
               <span className={className}>
                 <span className={route.icon} />
                 <span className="mx-2">{route.label}</span>
