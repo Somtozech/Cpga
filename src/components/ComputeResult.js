@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useForm from '../utils/useForm';
+import { Redirect } from 'react-router-dom';
 
 function ComputeResult(props) {
   const session = props.params.session;
@@ -7,7 +8,7 @@ function ComputeResult(props) {
     { name: '', regNo: '', mode_of_entry: 'UTME', state: '' },
     () => {
       window.addStudentToSession(session, values);
-      return props.history.push(`${props.match.url}/${values.regNo}/compute`);
+      return props.history.push(`/session/${session}/${values.regNo}/compute`);
     }
   );
 

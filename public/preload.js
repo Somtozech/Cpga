@@ -15,3 +15,5 @@ window.uploadCourse = helpers.uploadCourse;
 window.getCoursesInSession = helpers.getCoursesInSession;
 
 window.getStudentsInSession = helpers.getStudentsInSession;
+
+window.findStudentByRegNo = helpers.findStudentByRegNo;

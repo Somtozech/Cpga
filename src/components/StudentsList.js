@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function StudentsList(props) {
   const [students, setStudents] = useState([]);
@@ -13,7 +14,7 @@ function StudentsList(props) {
         <thead>
           <tr>
             <th
-              colspan={14}
+              colSpan={14}
               className="text-center"
               style={{ fontWeight: 600, fontSize: 16 }}
             >
@@ -36,9 +37,13 @@ function StudentsList(props) {
               <td>{student.name}</td>
               <td>{student.regNo}</td>
               <td>
-                <a href="">
+                <Link
+                  to={`/session/${props.params.session}/${
+                    student.regNo
+                  }/compute`}
+                >
                   <span className="icon icon-pencil" />
-                </a>
+                </Link>
               </td>
             </tr>
           ))}

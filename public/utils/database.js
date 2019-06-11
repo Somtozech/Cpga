@@ -21,6 +21,14 @@ class Db {
    * @param {Object} student - student's object
    */
   addStudentToSession(session, student) {
+    //if student is existing already
+    let existingStudent = this.db
+      .get(session)
+      .get('students')
+      .find({ regNo: student.regNo })
+      .value();
+    if (existingStudent) return;
+
     student.session = [];
     student.id = shortid.generate();
     this.db

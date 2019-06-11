@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 function CourseList(props) {
   const [session, setSession] = useState([]);
+  console.log(session);
 
   useEffect(() => {
     setSession(window.getCoursesInSession(props.params.session));
   }, [props.params.session, session]);
   return (
     <div className="course-list padded-more">
+      <h5>ALL COURSES</h5>
       {session.map(year => {
         return (
           <table className="table-striped" key={year.id}>

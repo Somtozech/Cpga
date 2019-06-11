@@ -8,20 +8,20 @@ function TableRow({ year }) {
       <tr className="course-head">
         <td width="5%">COURSE CODE</td>
         <td>COURSE TITLE</td>
-        <td width="4%" className="rotate-text">
+        <td width="4%" className="rotate-text text-center">
           UNIT
         </td>
-        <td width="4%" className="rotate-text">
+        <td width="4%" className="rotate-text text-center">
           SCORE
         </td>
 
         <td width="2%" />
         <td width="5%">COURSE CODE</td>
         <td>COURSE TITLE</td>
-        <td width="4%" className="rotate-text">
+        <td width="4%" className="rotate-text text-center">
           UNIT
         </td>
-        <td width="4%" className="rotate-text">
+        <td width="4%" className="rotate-text text-center">
           SCORE
         </td>
       </tr>
@@ -43,13 +43,21 @@ function TableRow({ year }) {
             <tr key={i}>
               <td contentEditable="true">{first.code}</td>
               <td contentEditable="true">{first.title}</td>
-              <td contentEditable="true">{first.unit}</td>
-              <td contentEditable="true">{first.score}</td>
+              <td contentEditable="true" className="text-center">
+                {first.unit}
+              </td>
+              <td contentEditable="true" className="text-center">
+                {first.score}
+              </td>
               <td />
               <td contentEditable="true">{second.code}</td>
               <td contentEditable="true">{second.title}</td>
-              <td contentEditable="true">{second.unit}</td>
-              <td contentEditable="true">{second.score}</td>
+              <td contentEditable="true" className="text-center">
+                {second.unit}
+              </td>
+              <td contentEditable="true" className="text-center">
+                {second.score}
+              </td>
             </tr>
           );
         })}
