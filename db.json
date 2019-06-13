@@ -6,59 +6,490 @@
         "regNo": "2015030171355",
         "mode_of_entry": "UTME",
         "state": "Enugu",
+        "session": [
+          {
+            "id": "TcpRCkM6s",
+            "year": "year one",
+            "first": [
+              {
+                "id": "42LeaCCLtb",
+                "code": "GST 101",
+                "title": "English and Technical Writing 1",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "AJVFpNaUsA",
+                "code": "GST 103",
+                "title": "Nigerian people and culture",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "3lKlU3ToGn",
+                "code": "GST 105",
+                "title": "Introduction to Logic and Philosophy",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "mvMnaJoDK1",
+                "code": "ICH 101",
+                "title": "Chemistry 1",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "2gprUQkwDo",
+                "code": "MAT 101",
+                "title": "Mathematics 1",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "D216W-S8QE",
+                "code": "CHE 111",
+                "title": "Intro. to Chemical Process Computation",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "Wsn_G_eIM8",
+                "code": "CEE 111",
+                "title": "Computer Programming & Language 1",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "woXkCnH57k",
+                "code": "EEE 151",
+                "title": "Intro. to Engineering Materials",
+                "unit": 2,
+                "score": "100",
+                "gp": 10,
+                "grade": "A"
+              }
+            ],
+            "second": [
+              {
+                "id": "1fEvxSZM0I",
+                "code": "GST 104",
+                "title": "History & Philosophy of Science",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "O25g7XgduV",
+                "code": "GST 102",
+                "title": "English and Technical Writing 1",
+                "unit": 2,
+                "score": "80",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "qAgRvU_17U",
+                "code": "ICH 102",
+                "title": "Chemistry",
+                "unit": 3,
+                "score": "50",
+                "gp": 9,
+                "grade": "C"
+              }
+            ],
+            "total": {
+              "first": {
+                "unit": 18,
+                "gp": 90,
+                "grade": "5.00"
+              },
+              "second": {
+                "unit": 7,
+                "gp": 29,
+                "grade": "4.14"
+              },
+              "summary": {
+                "tcp": 25,
+                "fcp": 119
+              }
+            }
+          },
+          {
+            "id": "tGoC9SM3Wu",
+            "year": "year two",
+            "first": [
+              {
+                "id": "QG-bXcEqiX",
+                "code": "FEG 203",
+                "title": "Engineering Analysis III",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "__-aHMktvD",
+                "code": "MEC 211",
+                "title": "Engineering Drawing",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "vuLIPmRwyg-",
+                "code": "EEE 211",
+                "title": "Applied Electricity I",
+                "unit": 3,
+                "score": "50",
+                "gp": 9,
+                "grade": "C"
+              }
+            ],
+            "second": [
+              {
+                "id": "Hec8wQ6PGo",
+                "code": "FEG 204",
+                "title": "Engineering Analysis IV",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "2tKBSmY3ILc",
+                "code": "MEC 212",
+                "title": "Engineering Drawing II",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "RPgLUwYrNu9",
+                "code": "EEE 212",
+                "title": "Applied Electricity II",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              }
+            ],
+            "total": {
+              "first": {
+                "unit": 8,
+                "gp": 34,
+                "grade": "4.25"
+              },
+              "second": {
+                "unit": 8,
+                "gp": 40,
+                "grade": "5.00"
+              },
+              "summary": {
+                "tcp": 16,
+                "fcp": 74
+              }
+            }
+          },
+          {
+            "id": "p3q6OO4ogWt",
+            "year": "year three",
+            "first": [
+              {
+                "id": "hIp4DYx03WD",
+                "code": "EEE 393",
+                "title": "Practical",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "1PpULDs_75g",
+                "code": "EEE 325",
+                "title": "Physical Electronics",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "s4mtyfCiDEI",
+                "code": "EEE 313",
+                "title": "Circuit Theory",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              }
+            ],
+            "second": [
+              {
+                "id": "JouCl9feWIU",
+                "code": "EEE 394",
+                "title": "Practical",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "sv7ztpFwIzg",
+                "code": "EEE 326",
+                "title": "Electronic Devices & Circuit I",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "2nCyNqbq54q",
+                "code": "EEE 372",
+                "title": "Instrument & Measurement",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              }
+            ],
+            "total": {
+              "first": {
+                "unit": 7,
+                "gp": 35,
+                "grade": "5.00"
+              },
+              "second": {
+                "unit": 7,
+                "gp": 35,
+                "grade": "5.00"
+              },
+              "summary": {
+                "tcp": 14,
+                "fcp": 70
+              }
+            }
+          },
+          {
+            "id": "_bFHQpSN-_8",
+            "year": "year four",
+            "first": [
+              {
+                "id": "caOdo2h-eGL",
+                "code": "EEE 427",
+                "title": "Electronics Devices and Circuit II",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "tnCNzlMnFl3",
+                "code": "EEE 414",
+                "title": "Circuit Theory",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "zdQwM6pUYHj",
+                "code": "EEE 451",
+                "title": "Electrical Services Design",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              }
+            ],
+            "second": [
+              {
+                "id": "aXpBpQ0g0R7",
+                "code": "IT",
+                "title": "Industrial Training",
+                "unit": 6,
+                "score": "70",
+                "gp": 30,
+                "grade": "A"
+              }
+            ],
+            "total": {
+              "first": {
+                "unit": 8,
+                "gp": 40,
+                "grade": "5.00"
+              },
+              "second": {
+                "unit": 6,
+                "gp": 30,
+                "grade": "5.00"
+              },
+              "summary": {
+                "tcp": 14,
+                "fcp": 70
+              }
+            }
+          },
+          {
+            "id": "1gZoAfm1pyR",
+            "year": "year five",
+            "first": [
+              {
+                "id": "pI5qK-Ksw_o",
+                "code": "EEE 598",
+                "title": "Seminar & Technical communication",
+                "unit": 2,
+                "score": "70",
+                "gp": 10,
+                "grade": "A"
+              },
+              {
+                "id": "FGmzkLvKrCe",
+                "code": "EEE 528",
+                "title": "Solid State Electronics",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "Zqxln7WU_NI",
+                "code": "EEE 533",
+                "title": "Digital Communications",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              }
+            ],
+            "second": [
+              {
+                "id": "UtWWQLSN-29",
+                "code": "EEE 574",
+                "title": "Control System Engineering",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              },
+              {
+                "id": "3qt0-i02g7F",
+                "code": "EEE 599",
+                "title": "Project 6",
+                "unit": 6,
+                "score": "70",
+                "gp": 30,
+                "grade": "A"
+              },
+              {
+                "id": "snCDpSFGw5K",
+                "code": "EEE 534",
+                "title": "Communication Principles",
+                "unit": 3,
+                "score": "70",
+                "gp": 15,
+                "grade": "A"
+              }
+            ],
+            "total": {
+              "first": {
+                "unit": 8,
+                "gp": 40,
+                "grade": "5.00"
+              },
+              "second": {
+                "unit": 12,
+                "gp": 60,
+                "grade": "5.00"
+              },
+              "summary": {
+                "tcp": 20,
+                "fcp": 100
+              }
+            }
+          }
+        ],
+        "id": "qEq0PSjxq",
+        "total": {
+          "tcp": 89,
+          "fcp": 433,
+          "gp": "4.87"
+        }
+      },
+      {
+        "name": "Ikonne Wisdom Uchechukwu",
+        "regNo": "2015030170255",
+        "mode_of_entry": "UTME",
+        "state": "Abia",
         "session": [],
-        "id": "qEq0PSjxq"
+        "id": "JAFMIN1aV"
       }
     ],
     "session": [
       {
-        "id": "6nsIVLj2i",
+        "id": "TcpRCkM6s",
         "year": "year one",
         "first": [
           {
-            "id": "LFBBb9LOAV",
+            "id": "42LeaCCLtb",
             "code": "GST 101",
             "title": "English and Technical Writing 1",
             "unit": 2
           },
           {
-            "id": "jM64zfAIHV",
+            "id": "AJVFpNaUsA",
             "code": "GST 103",
             "title": "Nigerian people and culture",
             "unit": 2
           },
           {
-            "id": "X6NZQNDTiJ",
+            "id": "3lKlU3ToGn",
             "code": "GST 105",
             "title": "Introduction to Logic and Philosophy",
             "unit": 2
           },
           {
-            "id": "l2_0Su2FVE",
+            "id": "mvMnaJoDK1",
             "code": "ICH 101",
             "title": "Chemistry 1",
             "unit": 3
           },
           {
-            "id": "JcbRUnWN7x",
+            "id": "2gprUQkwDo",
             "code": "MAT 101",
             "title": "Mathematics 1",
             "unit": 3
           },
           {
-            "id": "EHKV11xW8r",
+            "id": "D216W-S8QE",
             "code": "CHE 111",
             "title": "Intro. to Chemical Process Computation",
             "unit": 2
           },
           {
-            "id": "tLnkal5rDg",
+            "id": "Wsn_G_eIM8",
             "code": "CEE 111",
             "title": "Computer Programming & Language 1",
             "unit": 2
           },
           {
-            "id": "nQElgFo9w_",
+            "id": "woXkCnH57k",
             "code": "EEE 151",
             "title": "Intro. to Engineering Materials",
             "unit": 2
@@ -66,19 +497,19 @@
         ],
         "second": [
           {
-            "id": "ep7cRKSyJr",
+            "id": "1fEvxSZM0I",
             "code": "GST 104",
             "title": "History & Philosophy of Science",
             "unit": 2
           },
           {
-            "id": "55y0y-4zuI",
+            "id": "O25g7XgduV",
             "code": "GST 102",
             "title": "English and Technical Writing 1",
             "unit": 2
           },
           {
-            "id": "TEO9XJJSYC",
+            "id": "qAgRvU_17U",
             "code": "ICH 102",
             "title": "Chemistry",
             "unit": 3
@@ -86,23 +517,23 @@
         ]
       },
       {
-        "id": "p-LWwUSflP",
+        "id": "tGoC9SM3Wu",
         "year": "year two",
         "first": [
           {
-            "id": "HQ9R0FDQUh",
+            "id": "QG-bXcEqiX",
             "code": "FEG 203",
             "title": "Engineering Analysis III",
             "unit": 3
           },
           {
-            "id": "zvITPrJEs3",
+            "id": "__-aHMktvD",
             "code": "MEC 211",
             "title": "Engineering Drawing",
             "unit": 2
           },
           {
-            "id": "C6K4oDJw5iR",
+            "id": "vuLIPmRwyg-",
             "code": "EEE 211",
             "title": "Applied Electricity I",
             "unit": 3
@@ -110,19 +541,19 @@
         ],
         "second": [
           {
-            "id": "fs-drQaxCu",
+            "id": "Hec8wQ6PGo",
             "code": "FEG 204",
             "title": "Engineering Analysis IV",
             "unit": 3
           },
           {
-            "id": "CUONTftkWL5",
+            "id": "2tKBSmY3ILc",
             "code": "MEC 212",
             "title": "Engineering Drawing II",
             "unit": 2
           },
           {
-            "id": "xqjEHQ_O7o6",
+            "id": "RPgLUwYrNu9",
             "code": "EEE 212",
             "title": "Applied Electricity II",
             "unit": 3
@@ -130,23 +561,23 @@
         ]
       },
       {
-        "id": "aqQ_LLgKFrK",
+        "id": "p3q6OO4ogWt",
         "year": "year three",
         "first": [
           {
-            "id": "5frNbxlbj9U",
+            "id": "hIp4DYx03WD",
             "code": "EEE 393",
             "title": "Practical",
             "unit": 2
           },
           {
-            "id": "sE3LCuZX4No",
+            "id": "1PpULDs_75g",
             "code": "EEE 325",
             "title": "Physical Electronics",
             "unit": 3
           },
           {
-            "id": "gg1IUD0I1Ez",
+            "id": "s4mtyfCiDEI",
             "code": "EEE 313",
             "title": "Circuit Theory",
             "unit": 2
@@ -154,19 +585,19 @@
         ],
         "second": [
           {
-            "id": "in-qSeIDWgK",
+            "id": "JouCl9feWIU",
             "code": "EEE 394",
             "title": "Practical",
             "unit": 2
           },
           {
-            "id": "glDx_mYDa9j",
+            "id": "sv7ztpFwIzg",
             "code": "EEE 326",
             "title": "Electronic Devices & Circuit I",
             "unit": 3
           },
           {
-            "id": "QzU0OXzq9T6",
+            "id": "2nCyNqbq54q",
             "code": "EEE 372",
             "title": "Instrument & Measurement",
             "unit": 2
@@ -174,23 +605,23 @@
         ]
       },
       {
-        "id": "GKrfzClGn0j",
+        "id": "_bFHQpSN-_8",
         "year": "year four",
         "first": [
           {
-            "id": "rxudJkl2VLd",
+            "id": "caOdo2h-eGL",
             "code": "EEE 427",
             "title": "Electronics Devices and Circuit II",
             "unit": 3
           },
           {
-            "id": "dM5QEn_WEPl",
+            "id": "tnCNzlMnFl3",
             "code": "EEE 414",
             "title": "Circuit Theory",
             "unit": 3
           },
           {
-            "id": "zaW9bSRvh1p",
+            "id": "zdQwM6pUYHj",
             "code": "EEE 451",
             "title": "Electrical Services Design",
             "unit": 2
@@ -198,7 +629,7 @@
         ],
         "second": [
           {
-            "id": "Ym08YjnxfXk",
+            "id": "aXpBpQ0g0R7",
             "code": "IT",
             "title": "Industrial Training",
             "unit": 6
@@ -206,23 +637,23 @@
         ]
       },
       {
-        "id": "WS3j6cmIAt_",
+        "id": "1gZoAfm1pyR",
         "year": "year five",
         "first": [
           {
-            "id": "76XKgWr26mS",
+            "id": "pI5qK-Ksw_o",
             "code": "EEE 598",
             "title": "Seminar & Technical communication",
             "unit": 2
           },
           {
-            "id": "N-yRa2Ch862",
+            "id": "FGmzkLvKrCe",
             "code": "EEE 528",
             "title": "Solid State Electronics",
             "unit": 3
           },
           {
-            "id": "0k64ZFC73bk",
+            "id": "Zqxln7WU_NI",
             "code": "EEE 533",
             "title": "Digital Communications",
             "unit": 3
@@ -230,19 +661,19 @@
         ],
         "second": [
           {
-            "id": "Rr4juEh1DJM",
+            "id": "UtWWQLSN-29",
             "code": "EEE 574",
             "title": "Control System Engineering",
             "unit": 3
           },
           {
-            "id": "2WZ5BveBn4z",
+            "id": "3qt0-i02g7F",
             "code": "EEE 599",
             "title": "Project 6",
             "unit": 6
           },
           {
-            "id": "AYbwpd4D-ah",
+            "id": "snCDpSFGw5K",
             "code": "EEE 534",
             "title": "Communication Principles",
             "unit": 3

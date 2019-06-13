@@ -4,6 +4,8 @@ const isDev = require('electron-is-dev');
 const dataStore = require('./utils/database');
 const uploadCourseToDataStore = require('./utils/uploadCourse');
 
+const summary = require('./utils/addGpAndGrade');
+
 let mainWindow;
 
 const createWindow = () => {
@@ -76,6 +78,7 @@ const getCoursesInSession = (exports.getCoursesInSession = session => {
   return dataStore.getCoursesInSession(session);
 });
 
+//get all students in a particular session
 const getStudentsInSession = (exports.getStudentsInSession = session => {
   return dataStore.getStudentsInSession(session);
 });
@@ -86,4 +89,30 @@ const findStudentByRegNo = (exports.findStudentByRegNo = (session, regNo) => {
     .get('students')
     .find({ regNo })
     .value();
+});
+
+const saveStudentsResult = (exports.saveStudentsResult = (
+  session,
+  studentId,
+  scores
+) => {
+  dataStore.db
+    .get(session)
+    .get('students')
+    .find({ id: studentId })
+    .set('session', scores)
+    .write();
+
+  const studentResult = dataStore.db
+    .get(session)
+    .get('students')
+    .find({ id: studentId })
+    .value();
+
+  return dataStore.db
+    .get(session)
+    .get('students')
+    .find({ id: studentId })
+    .assign(summary(studentResult))
+    .write();
 });

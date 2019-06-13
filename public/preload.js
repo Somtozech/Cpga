@@ -17,3 +17,5 @@ window.getCoursesInSession = helpers.getCoursesInSession;
 window.getStudentsInSession = helpers.getStudentsInSession;
 
 window.findStudentByRegNo = helpers.findStudentByRegNo;
+
+window.saveStudentsResult = helpers.saveStudentsResult;

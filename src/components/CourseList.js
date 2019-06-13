@@ -6,7 +6,7 @@ function CourseList(props) {
 
   useEffect(() => {
     setSession(window.getCoursesInSession(props.params.session));
-  }, [props.params.session, session]);
+  }, [props.params.session]);
   return (
     <div className="course-list padded-more">
       <h5>ALL COURSES</h5>
