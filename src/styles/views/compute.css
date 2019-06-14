@@ -17,29 +17,54 @@
 }
 
 .compute .table {
-  margin: 30px auto;
+  margin: 30px auto 0px auto;
   border-collapse: collapse;
   width: 93vw;
 }
 
 .compute .table th {
   color: #000;
-  font-weight: 500;
+  font-weight: bolder;
   font-size: 14px;
 }
 
 .compute .table td,
-.compute .table th {
+.compute .table th,
+.compute .summary table td {
   border: 1px solid #ddd;
 }
 
 .compute .course-head {
   text-align: center;
   height: 70px;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 12px;
+}
+
+.compute .course-summary td {
+  font-weight: bolder;
 }
 
 .compute .table-divider {
   margin-top: 30px;
+}
+
+.compute .summary table {
+  width: 100%;
+}
+
+.compute .summary {
+  justify-content: space-around;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.compute .summary div {
+  width: 40vw;
+  padding: 0;
+}
+
+.compute .summary table {
+  border-collapse: collapse;
+  width: 100%;
 }
