@@ -6,18 +6,19 @@ function Header(props) {
     <header className="toolbar toolbar-header header">
       <div className="toolbar-actions">
         <div className="btn-group">
-          <button className="btn btn-default">
-            <span className="icon icon-home" />{' '}
-            <span className="mx-2">
-              <Link to="/">Home</Link>
-            </span>
-          </button>
-          <button className="btn btn-default">
-            <span className="icon icon-folder" />
-            <span className="mx-2">
-              <Link to="/sessions">Sessions</Link>
-            </span>
-          </button>
+          <Link to="/">
+            <button className="btn btn-default">
+              <span className="icon icon-home" />
+              <span className="mx-2">home</span>
+            </button>
+          </Link>
+
+          <Link to="/sessions">
+            <button className="btn btn-default">
+              <span className="icon icon-folder" />
+              <span className="mx-2">Sessions</span>
+            </button>
+          </Link>
         </div>
       </div>
     </header>
