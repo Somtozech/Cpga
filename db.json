@@ -82,6 +82,15 @@
                 "score": "100",
                 "gp": 10,
                 "grade": "A"
+              },
+              {
+                "id": "VioYEh_p6",
+                "code": "",
+                "title": "",
+                "unit": "",
+                "score": "",
+                "gp": "-",
+                "grade": "-"
               }
             ],
             "second": [
@@ -160,6 +169,15 @@
                 "score": "50",
                 "gp": 9,
                 "grade": "C"
+              },
+              {
+                "id": "68ki_lpQm",
+                "code": "GST 211",
+                "title": "Enterpreneurship study",
+                "unit": "2",
+                "score": "50",
+                "gp": 6,
+                "grade": "C"
               }
             ],
             "second": [
@@ -193,9 +211,9 @@
             ],
             "total": {
               "first": {
-                "unit": 8,
-                "gp": 34,
-                "grade": "4.25"
+                "unit": 10,
+                "gp": 40,
+                "grade": "4.00"
               },
               "second": {
                 "unit": 8,
@@ -203,8 +221,8 @@
                 "grade": "5.00"
               },
               "summary": {
-                "tcp": 16,
-                "fcp": 74
+                "tcp": 18,
+                "fcp": 80
               }
             }
           },
@@ -427,9 +445,9 @@
         ],
         "id": "qEq0PSjxq",
         "total": {
-          "tcp": 89,
-          "fcp": 433,
-          "gp": "4.87"
+          "tcp": 91,
+          "fcp": 439,
+          "gp": "4.82"
         }
       },
       {

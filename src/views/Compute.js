@@ -1,6 +1,7 @@
 import React, { useState, createRef, useEffect } from 'react';
 // import sessions from './sessionss';
 import TableRow from '../components/TableRow';
+import shortid from 'shortid';
 
 const root = createRef();
 
@@ -32,6 +33,18 @@ function CreateSessionPage(props) {
     const updatedSessions = [...sessions];
     const session = sessions.find(session => session.id === id);
     const index = sessions.findIndex(session => session.id === id);
+    if (!session[semester][row]) {
+      session[semester] = [
+        ...session[semester],
+        {
+          id: shortid.generate(),
+          code: '',
+          title: '',
+          unit: '',
+          score: ''
+        }
+      ];
+    }
     session[semester][row][type] = value;
     updatedSessions[index] = session;
     localStorage.setItem('sessions', JSON.stringify(updatedSessions));

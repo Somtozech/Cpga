@@ -156,7 +156,7 @@ function Row({ year }) {
           );
         })}
       </React.Fragment>
-      <tr class="course-summary">
+      <tr className="course-summary">
         <td height={20} />
         <td>TOTAL</td>
         <td>{year.total.first.unit}</td>
@@ -193,7 +193,7 @@ function Summary({ student }) {
         </td>
       </tr>
       {student.session.map(session => (
-        <tr>
+        <tr key={session.id}>
           <td style={{ border: 0 }} />
           <td>{String(session.year).toUpperCase()}</td>
           <td colSpan={2} className="text-center">

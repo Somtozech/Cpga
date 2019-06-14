@@ -56,6 +56,7 @@ function TableRow({ year, handleCellChange }) {
                 semester="first"
                 x={i}
                 type="unit"
+                textCenter={true}
               />
               <Cell
                 value={first.score}
@@ -63,6 +64,7 @@ function TableRow({ year, handleCellChange }) {
                 semester="first"
                 x={i}
                 type="score"
+                textCenter={true}
               />
               <td />
               <Cell
@@ -85,13 +87,16 @@ function TableRow({ year, handleCellChange }) {
                 semester="second"
                 x={i}
                 type="unit"
+                textCenter={true}
               />
+
               <Cell
                 value={second.score}
                 handleCellChange={handleCellChange}
                 semester="second"
                 x={i}
                 type="score"
+                textCenter={true}
               />
             </tr>
           );
@@ -103,7 +108,7 @@ function TableRow({ year, handleCellChange }) {
 
 export default TableRow;
 
-function Cell({ value, semester, handleCellChange, x, type }) {
+function Cell({ value, semester, handleCellChange, x, type, textCenter }) {
   const checkTypeAndValue = e => {
     if (type === 'score' || type === 'unit') {
       let textContent = e.target.textContent;
@@ -125,10 +130,12 @@ function Cell({ value, semester, handleCellChange, x, type }) {
     checkTypeAndValue(e);
     handleCellChange({ semester, row: x, type, value: e.target.textContent });
   };
+  const className = textCenter ? 'text-center' : '';
   return (
     <td
       contentEditable={true}
       onInput={handleInput}
+      className={className}
       suppressContentEditableWarning={true}
       style={{ height: 20 }}
     >

@@ -19,9 +19,6 @@ function Header(props) {
             </span>
           </button>
         </div>
-        <button className="btn  pull-right">
-          <span className="icon icon-cancel " style={{ fontSize: 20 }} />
-        </button>
       </div>
     </header>
   );
