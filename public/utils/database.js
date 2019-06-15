@@ -1,8 +1,13 @@
 const low = require('lowdb');
+const { app } = require('electron');
 const FileSync = require('lowdb/adapters/FileSync');
 const shortid = require('shortid');
 
-const adapter = new FileSync('./db.json');
+const dir = app.getPath('userData');
+const adapter = new FileSync(dir + '/db.json');
+
+console.log();
+
 const db = low(adapter);
 
 class Db {

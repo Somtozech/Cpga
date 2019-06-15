@@ -4,7 +4,7 @@ const isDev = require('electron-is-dev');
 const dataStore = require('./utils/database');
 const uploadCourseToDataStore = require('./utils/uploadCourse');
 
-const summary = require('./utils/addGpAndGrade');
+const summary = require('./utils/totalSummary');
 
 let mainWindow;
 
