@@ -15,12 +15,21 @@
     "shortid": "^2.2.14",
     "xlsx": "^0.14.3"
   },
+  "build": {
+    "appId": "com.electron.cpga",
+    "productName": "Cpga",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icons/icon.ico"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"  ",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dist": "yarn start && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
