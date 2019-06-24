@@ -2,9 +2,11 @@
   "name": "cpga",
   "version": "0.1.0",
   "private": true,
+  "description": "Cpga is a desktop application for calculating student's cpga",
+  "author": "Ezechi Nnaemeka Somtochukwu",
   "main": "./public/electron.js",
+  "homepage": ".",
   "dependencies": {
-    "electron": "^5.0.2",
     "electron-is-dev": "^1.1.0",
     "is-electron": "^2.2.0",
     "lowdb": "^1.0.0",
@@ -18,6 +20,7 @@
   "build": {
     "appId": "com.electron.cpga",
     "productName": "Cpga",
+    "copyright": "Copyright © 2019 Somtozech. All rights reserved",
     "win": {
       "target": "nsis",
       "icon": "build/icons/icon.ico"
@@ -29,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dist": "yarn start && electron-builder"
+    "dist": " electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "electron": "^5.0.2",
     "electron-builder": "^20.43.0"
   }
 }
