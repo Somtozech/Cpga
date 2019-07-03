@@ -1,6 +1,19 @@
 import React from 'react';
 
 function Summary({ student }) {
+  const studentTotal = student.total || {
+    tcp: 0,
+    fcp: 0,
+    gp: 0
+  };
+  const initialState = {
+    summary: {
+      tcp: 0,
+      fcp: 0
+    },
+    tcp: 0,
+    fcp: 0
+  };
   return (
     <tbody>
       <tr className="course-summary">
@@ -17,33 +30,36 @@ function Summary({ student }) {
           FCP
         </td>
       </tr>
-      {student.session.map(session => (
-        <tr key={session.id}>
-          <td style={{ border: 0 }} />
-          <td>{String(session.year).toUpperCase()}</td>
-          <td colSpan={2} className="text-center">
-            {session.total.summary.tcp}
-          </td>
-          <td colSpan={2} className="text-center">
-            {session.total.summary.fcp}
-          </td>
-        </tr>
-      ))}
+      {student.session.map(session => {
+        const total = session.total;
+        return (
+          <tr key={session.id}>
+            <td style={{ border: 0 }} />
+            <td>{String(session.year).toUpperCase()}</td>
+            <td colSpan={2} className="text-center">
+              {total.summary.tcp}
+            </td>
+            <td colSpan={2} className="text-center">
+              {total.summary.fcp}
+            </td>
+          </tr>
+        );
+      })}
       <tr className="course-summary">
         <td style={{ border: 0 }} />
         <td>TOTAL</td>
         <td colSpan={2} className="text-center">
-          {student.total.tcp}
+          {studentTotal.tcp}
         </td>
         <td colSpan={2} className="text-center">
-          {student.total.fcp}
+          {studentTotal.fcp}
         </td>
       </tr>
       <tr className="course-summary">
         <td style={{ border: 0 }} height={30} />
         <td className="text-center f-18">FCGPA</td>
         <td colSpan={4} className="text-center f-18">
-          {student.total.gp}
+          {studentTotal.gp}
         </td>
       </tr>
     </tbody>

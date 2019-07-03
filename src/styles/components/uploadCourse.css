@@ -1,0 +1,14 @@
+.upload-course table {
+  border-collapse: collapse;
+}
+
+.upload-course table th,
+.upload-course table td {
+  border: 1px solid #000;
+}
+
+.upload-course table th {
+  color: #000;
+  font-weight: bolder;
+  font-size: 13px;
+}
