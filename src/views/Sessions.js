@@ -18,7 +18,7 @@ function SessionsPage() {
           return (
             <li className="list-group-item" key={i}>
               <p>
-                <Link to={`/session/${session}/`}>{session} session</Link>
+                <Link to={`/session/${session}/upload`}>{session} session</Link>
               </p>
             </li>
           );

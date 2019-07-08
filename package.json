@@ -7,7 +7,6 @@
   "main": "./public/electron.js",
   "homepage": ".",
   "dependencies": {
-    "electron": "^5.0.6",
     "electron-is-dev": "^1.1.0",
     "is-electron": "^2.2.0",
     "lowdb": "^1.0.0",
@@ -33,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dist": " electron-builder"
+    "dist": "yarn build && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +50,8 @@
     ]
   },
   "devDependencies": {
-    "electron-builder": "^20.43.0"
+    "electron": "^5.0.6",
+    "electron-builder": "^20.43.0",
+    "typescript": "^3.5.2"
   }
 }

@@ -12,8 +12,18 @@ function ResultPage({ match }) {
     setStudent(window.findStudentByRegNo(params.session, params.regNo));
   }, [params.regNo, params.session, student, student.session]);
 
+  const handlePrint = e => {};
+
   return (
     <div className="compute padded-more">
+      <div>
+        <button
+          className="btn btn-large btn-primary pull-right"
+          onClick={handlePrint}
+        >
+          Print
+        </button>
+      </div>
       {student.session ? (
         <React.Fragment>
           <div className="student-info">

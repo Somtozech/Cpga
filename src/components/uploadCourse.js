@@ -3,7 +3,7 @@ import shortid from 'shortid';
 
 function UploadCourse({ params, history, match }) {
   const session = params.session;
-  const url = match.url.replace('upload', 'courses');
+  const url = match.url.replace('upload', '');
   const defaultState = [
     { id: shortid.generate(), year: 'year one', first: [], second: [] },
     { id: shortid.generate(), year: 'year two', first: [], second: [] },
