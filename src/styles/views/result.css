@@ -1,0 +1,90 @@
+.result {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  font-size: 11px;
+}
+
+.result h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.result table {
+  margin: 30px auto 0px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.result table th {
+  font-size: 12px;
+  font-weight: bolder;
+}
+.result table th,
+.result table td {
+  padding: 5px 3px;
+  border: 1px solid #ddd;
+}
+
+.result .course-head {
+  height: 70px;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.result .course-head td {
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+}
+
+.result .student-info {
+  width: 100%;
+  margin: 0 auto;
+}
+.result .student-info div {
+  border-bottom: 1px dotted #333;
+}
+
+.result .course-summary td {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result .summary-table {
+  justify-content: space-around;
+  margin-bottom: 100px;
+  align-items: center;
+}
+
+.result .summary-table div {
+  width: 55vw;
+  padding: 0;
+}
+
+.result .summary-table table {
+  border-collapse: collapse;
+  width: 40vw;
+}
+
+@media print {
+  .header {
+    display: none;
+  }
+  .student-result {
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    page-break-after: always;
+  }
+
+  .student-result table td {
+    font-size: 9px;
+  }
+  .hide {
+    display: none;
+  }
+}

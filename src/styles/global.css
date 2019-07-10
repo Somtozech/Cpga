@@ -16,10 +16,8 @@
 @import 'views/sessions.css';
 @import 'views/createSession.css';
 @import 'views/compute.css';
+@import 'views/result.css';
 
-html {
-  /* overflow-y: auto; */
-}
 .mx-2 {
   margin: 0px 4px;
 }

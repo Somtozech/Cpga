@@ -1,5 +1,6 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const isDev = require('electron-is-dev');
+const fs = require('fs');
 
 const dataStore = require('./utils/database');
 const uploadCourseToDataStore = require('./utils/uploadCourse');
@@ -28,6 +29,7 @@ const createWindow = () => {
 
 app.on('ready', () => {
   createWindow();
+
   dataStore.addStudentToSession('2018-2019', {
     name: 'Ezechi Nnaemeka',
     regNo: '2015030171355',
@@ -115,4 +117,36 @@ const saveStudentsResult = (exports.saveStudentsResult = (
     .find({ id: studentId })
     .assign(summary(studentResult))
     .write();
+});
+
+const printToPdf = (exports.printToPDF = student => {
+  mainWindow.webContents.printToPDF(
+    {
+      marginsType: 0,
+      printBackground: false,
+      printSelectionOnly: false,
+      landscape: false,
+      pageSize: 'A4'
+    },
+    (err, data) => {
+      if (err) throw err;
+      const dir = app.getPath('documents') + `/cpga/results`;
+      let stat;
+      try {
+        stat = fs.statSync(dir);
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          fs.mkdirSync(dir.replace('/results', ''));
+          fs.mkdirSync(dir);
+          stat = fs.statSync(dir);
+        }
+      }
+      const file =
+        stat.isDirectory() && dir + `/${student.name}_${student.regNo}.pdf`;
+      fs.writeFile(file, data, error => {
+        if (error) throw error;
+        shell.openExternal('file://' + file);
+      });
+    }
+  );
 });

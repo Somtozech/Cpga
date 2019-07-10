@@ -48,23 +48,3 @@
 .compute .table-divider {
   margin-top: 30px;
 }
-
-.compute .summary table {
-  width: 100%;
-}
-
-.compute .summary {
-  justify-content: space-around;
-  margin-bottom: 50px;
-  align-items: center;
-}
-
-.compute .summary div {
-  width: 40vw;
-  padding: 0;
-}
-
-.compute .summary table {
-  border-collapse: collapse;
-  width: 100%;
-}

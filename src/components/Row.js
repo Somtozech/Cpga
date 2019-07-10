@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Row({ year }) {
-  const length = Math.max(year.first.length, year.second.length, 10);
+  const length = Math.max(year.first.length, year.second.length, 15);
   const initialValue = {
     code: '',
     title: '',
@@ -12,17 +12,17 @@ function Row({ year }) {
   };
   const arr = new Array(length).fill(0);
   const headers = [
-    { label: 'COURSE CODE', width: '5%' },
+    { label: 'COURSE CODE', width: '4%', rotateText: true },
     { label: 'COURSE TITLE', width: '' },
     { label: 'UNIT', width: '4%', rotateText: true },
-    { label: 'SCORE', width: '4%', rotateText: true },
+    // { label: 'SCORE', width: '4%', rotateText: true },
     { label: 'GRADE', width: '4%', rotateText: true },
     { label: 'GP', width: '4%' },
     { label: '', width: '2%' },
-    { label: 'COURSE CODE', width: '5%' },
+    { label: 'COURSE CODE', width: '4%', rotateText: true },
     { label: 'COURSE TITLE', width: '' },
     { label: 'UNIT', width: '4%', rotateText: true },
-    { label: 'SCORE', width: '4%', rotateText: true },
+    // { label: 'SCORE', width: '4%', rotateText: true },
     { label: 'GRADE', width: '4%', rotateText: true },
     { label: 'GP', width: '4%' }
   ];
@@ -48,14 +48,14 @@ function Row({ year }) {
               <td height={20}>{first.code}</td>
               <td>{first.title}</td>
               <td className="text-center">{first.unit}</td>
-              <td className="text-center">{first.score}</td>
+              {/* <td className="text-center">{first.score}</td> */}
               <td className="text-center">{first.grade}</td>
               <td className="text-center">{first.gp}</td>
               <td />
               <td>{second.code}</td>
               <td>{second.title}</td>
               <td className="text-center">{second.unit}</td>
-              <td className="text-center">{second.score}</td>
+              {/* <td className="text-center">{second.score}</td> */}
               <td className="text-center">{second.grade}</td>
               <td className="text-center">{second.gp}</td>
             </tr>
@@ -63,17 +63,15 @@ function Row({ year }) {
         })}
       </React.Fragment>
       <tr className="course-summary">
-        <td height={20} />
         <td>TOTAL</td>
-        <td>{year.total.first.unit}</td>
         <td />
+        <td>{year.total.first.unit}</td>
         <td>{year.total.first.grade}</td>
         <td>{year.total.first.gp}</td>
         <td />
-        <td height={20} />
         <td>TOTAL</td>
-        <td>{year.total.second.unit}</td>
         <td />
+        <td>{year.total.second.unit}</td>
         <td>{year.total.second.grade}</td>
         <td>{year.total.second.gp}</td>
       </tr>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function SessionsPage() {
+function SessionsPage(props) {
   const [sessions, setSessions] = useState([]);
 
   useEffect(() => {

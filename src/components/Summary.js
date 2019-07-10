@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Summary({ student }) {
+  console.log(student);
   const studentTotal = student.total || {
     tcp: 0,
     fcp: 0,
@@ -16,11 +17,13 @@ function Summary({ student }) {
   };
   return (
     <tbody>
-      <tr className="course-summary">
+      <tr>
         <td style={{ border: 0 }} />
-        <td style={{ border: 0 }}>SUMMARY</td>
+        <td style={{ border: 0, fontSize: 12, fontWeight: 'bolder' }}>
+          SUMMARY
+        </td>
       </tr>
-      <tr className="course-summary">
+      <tr>
         <td style={{ border: 0 }} width="12%" />
         <td>LEVEL</td>
         <td colSpan={2} width="12%">
@@ -45,7 +48,7 @@ function Summary({ student }) {
           </tr>
         );
       })}
-      <tr className="course-summary">
+      <tr style={{ fontSize: 12, fontWeight: 'bolder' }}>
         <td style={{ border: 0 }} />
         <td>TOTAL</td>
         <td colSpan={2} className="text-center">
@@ -55,7 +58,7 @@ function Summary({ student }) {
           {studentTotal.fcp}
         </td>
       </tr>
-      <tr className="course-summary">
+      <tr style={{ fontWeight: 'bolder' }}>
         <td style={{ border: 0 }} height={30} />
         <td className="text-center f-18">FCGPA</td>
         <td colSpan={4} className="text-center f-18">

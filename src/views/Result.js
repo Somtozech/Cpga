@@ -12,11 +12,13 @@ function ResultPage({ match }) {
     setStudent(window.findStudentByRegNo(params.session, params.regNo));
   }, [params.regNo, params.session, student, student.session]);
 
-  const handlePrint = e => {};
+  const handlePrint = e => {
+    window.printToPDF({ name: student.name, regNo: student.regNo });
+  };
 
   return (
-    <div className="compute padded-more">
-      <div>
+    <div className="result padded-more">
+      <div class="hide">
         <button
           className="btn btn-large btn-primary pull-right"
           onClick={handlePrint}
@@ -25,7 +27,7 @@ function ResultPage({ match }) {
         </button>
       </div>
       {student.session ? (
-        <React.Fragment>
+        <div className="student-result">
           <div className="student-info">
             <div className="d-flex">
               <h5 className="flex">
@@ -45,27 +47,25 @@ function ResultPage({ match }) {
             {session.map((year, i) => {
               return (
                 <React.Fragment key={year.id}>
-                  <thead>
+                  <tbody>
                     <tr>
-                      <th colSpan="13" className="text-center">
+                      <th colSpan="11" className="text-center">
                         {String(year.year).toUpperCase()}
                       </th>
                     </tr>
-                  </thead>
-                  <tbody>
                     <tr>
-                      <th colSpan="6">FIRST SEMESTER</th>
+                      <th colSpan="5">FIRST SEMESTER</th>
                       <th colSpan="1" />
-                      <th colSpan="6">SECOND SEMESTER</th>
+                      <th colSpan="5">SECOND SEMESTER</th>
                     </tr>
                     <Row year={year} />
-                    <tr height={30} />
+                    <tr height={40} />
                   </tbody>
                 </React.Fragment>
               );
             })}
           </table>
-          <div className="d-flex summary">
+          <div className="d-flex summary-table">
             <div>
               <table>
                 <Summary student={student} />
@@ -73,7 +73,7 @@ function ResultPage({ match }) {
             </div>
             <div>
               <div className="d-flex">
-                <h5>HEAD OF DEPARTMENT: </h5>
+                <h5>HOD: </h5>
                 <hr
                   className="flex mx-2"
                   style={{ borderBottom: '1px dotted #000' }}
@@ -99,7 +99,7 @@ function ResultPage({ match }) {
               <div className="text-bold">A=5,B=4,C=3,D=2,F=0</div>
             </div>
           </div>
-        </React.Fragment>
+        </div>
       ) : null}
     </div>
   );

@@ -19,3 +19,5 @@ window.getStudentsInSession = helpers.getStudentsInSession;
 window.findStudentByRegNo = helpers.findStudentByRegNo;
 
 window.saveStudentsResult = helpers.saveStudentsResult;
+
+window.printToPDF = helpers.printToPDF;
