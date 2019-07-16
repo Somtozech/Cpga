@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 import Summary from '../components/Summary';
 import Row from '../components/Row';
+import { Link } from 'react-router-dom';
 
 function ResultPage({ match }) {
   const [student, setStudent] = useState({});
   const { params } = match;
   const session = student.session;
+  const url = match.url.replace('print', 'compute');
 
   useEffect(() => {
     setStudent(window.findStudentByRegNo(params.session, params.regNo));
@@ -19,6 +21,18 @@ function ResultPage({ match }) {
   return (
     <div className="result padded-more">
       <div class="hide">
+        <span>
+          <Link
+            to={url}
+            style={{
+              textDecoration: 'underline',
+              color: '#001f3f',
+              fontSize: 15
+            }}
+          >
+            Back
+          </Link>
+        </span>
         <button
           className="btn btn-large btn-primary pull-right"
           onClick={handlePrint}

@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, shell } = require('electron');
+const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
 const isDev = require('electron-is-dev');
 const fs = require('fs');
 
@@ -149,4 +149,21 @@ const printToPdf = (exports.printToPDF = student => {
       });
     }
   );
+});
+
+/**
+ * Delete a session
+ */
+const deleteSession = (exports.deleteSession = session => {
+  const result = dialog.showMessageBox(mainWindow, {
+    type: 'warning',
+    title: 'Delete Session',
+    message:
+      'Are you sure you want to delete session? All progress involving the session would  be lost.',
+    buttons: ['Delete', 'Cancel'],
+    defaultId: 1,
+    cancelId: 1
+  });
+  //force window to close if result is 0
+  if (result === 0) dataStore.deleteSession(session);
 });

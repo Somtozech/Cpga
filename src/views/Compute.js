@@ -2,6 +2,7 @@ import React, { useState, createRef, useEffect } from 'react';
 // import sessions from './sessionss';
 import TableRow from '../components/TableRow';
 import shortid from 'shortid';
+import { Link } from 'react-router-dom';
 
 const root = createRef();
 
@@ -9,6 +10,8 @@ function CreateSessionPage(props) {
   const [sessions, setSession] = useState([]);
   const [student, setStudent] = useState({});
   const { params } = props.match;
+
+  const url = `/session/${params.session}/`;
 
   useEffect(() => {
     const studentSession =
@@ -23,8 +26,7 @@ function CreateSessionPage(props) {
     return () => {
       const scores = JSON.parse(localStorage.getItem('sessions'));
       if (scores && params.session && student.id) {
-        window.saveStudentsResult(params.session, student.id, scores);
-        localStorage.clear();
+       handleSave(null);
       }
     };
   }, [params.regNo, params.session, student]);
@@ -51,7 +53,6 @@ function CreateSessionPage(props) {
   };
 
   const handleSave = e => {
-    console.log('save');
     const scores = JSON.parse(localStorage.getItem('sessions'));
     if (scores) {
       window.saveStudentsResult(params.session, student.id, scores);
@@ -68,6 +69,18 @@ function CreateSessionPage(props) {
   return (
     <div className="compute padded-more">
       <div className="save">
+        <span>
+          <Link
+            to={url}
+            style={{
+              textDecoration: 'underline',
+              color: '#001f3f',
+              fontSize: 15
+            }}
+          >
+            Back
+          </Link>
+        </span>
         <button
           className="btn mx-2 btn-large btn-positive pull-right"
           onClick={handleViewResult}

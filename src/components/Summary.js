@@ -1,20 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Summary({ student }) {
-  console.log(student);
-  const studentTotal = student.total || {
+  const [studentTotal, setStudentTotal] = useState({
     tcp: 0,
     fcp: 0,
     gp: 0
-  };
-  const initialState = {
-    summary: {
-      tcp: 0,
-      fcp: 0
-    },
-    tcp: 0,
-    fcp: 0
-  };
+  });
+
+  useEffect(() => {
+    student && student.total && setStudentTotal(student.total);
+  }, [student, studentTotal]);
+
   return (
     <tbody>
       <tr>

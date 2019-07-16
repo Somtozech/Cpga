@@ -6,8 +6,6 @@ const shortid = require('shortid');
 const dir = app.getPath('userData');
 const adapter = new FileSync(dir + '/db.json');
 
-console.log();
-
 const db = low(adapter);
 
 class Db {
@@ -72,6 +70,10 @@ class Db {
 
   read() {
     return this.db.getState();
+  }
+
+  deleteSession(session) {
+    return this.db.unset(session).write();
   }
 }
 

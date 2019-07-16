@@ -21,3 +21,5 @@ window.findStudentByRegNo = helpers.findStudentByRegNo;
 window.saveStudentsResult = helpers.saveStudentsResult;
 
 window.printToPDF = helpers.printToPDF;
+
+window.deleteSession = helpers.deleteSession;

@@ -6,7 +6,7 @@ function SessionsPage(props) {
 
   useEffect(() => {
     setSessions(window.getSessions());
-  }, []);
+  }, [sessions, sessions.length]);
 
   return (
     <div className="padded-more sessions">
@@ -18,7 +18,16 @@ function SessionsPage(props) {
           return (
             <li className="list-group-item" key={i}>
               <p>
-                <Link to={`/session/${session}/upload`}>{session} session</Link>
+                <Link to={`/session/${session}/upload`} style={{ flex: 1 }}>
+                  {session} session
+                </Link>
+                <span
+                  class="icon icon-trash"
+                  onClick={e => {
+                    window.deleteSession(session);
+                    setSessions(window.getSessions());
+                  }}
+                />
               </p>
             </li>
           );
