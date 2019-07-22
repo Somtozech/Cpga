@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useForm from '../utils/useForm';
-import { Redirect } from 'react-router-dom';
 
 function ComputeResult(props) {
   const session = props.params.session;
@@ -12,7 +11,7 @@ function ComputeResult(props) {
     }
   );
 
-  const { values, handleChange, handleSubmit, clear } = form;
+  const { values, handleChange, handleSubmit} = form;
 
   const disabled =
     !values.name || !values.regNo || !values.mode_of_entry || !values.state;

@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
 const isDev = require('electron-is-dev');
 const fs = require('fs');
+const path = require('path');
 
 const dataStore = require('./utils/database');
 const uploadCourseToDataStore = require('./utils/uploadCourse');
@@ -130,7 +131,7 @@ const printToPdf = (exports.printToPDF = student => {
     },
     (err, data) => {
       if (err) throw err;
-      const dir = app.getPath('documents') + `/cpga/results`;
+      const dir = path.join(app.getPath('documents'), '/cpga/results');
       let stat;
       try {
         stat = fs.statSync(dir);
@@ -141,11 +142,14 @@ const printToPdf = (exports.printToPDF = student => {
           stat = fs.statSync(dir);
         }
       }
-      const file =
-        stat.isDirectory() && dir + `/${student.name}_${student.regNo}.pdf`;
+      let file =
+        stat.isDirectory() &&
+        path.join(dir, `/${encodeURI(student.name)}_${student.regNo}.pdf`);
+
       fs.writeFile(file, data, error => {
         if (error) throw error;
-        shell.openExternal('file://' + file);
+        shell.openItem(file);
+        alert('Result Saved Successfully!');
       });
     }
   );

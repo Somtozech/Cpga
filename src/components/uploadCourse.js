@@ -38,7 +38,7 @@ function UploadCourse({ params, history, match }) {
           />
         </div>
       </div>
-      <h5>ENTER SESSIONS COURSES </h5>
+      {/* <h5>ENTER SESSIONS COURSES </h5>
       <table className="table" width="100%">
         <tbody>
           {courses.map(course => {
@@ -78,7 +78,7 @@ function UploadCourse({ params, history, match }) {
             );
           })}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 }

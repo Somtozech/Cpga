@@ -8,6 +8,9 @@ function Summary({ student }) {
   });
 
   useEffect(() => {
+    if (!student && !student.total) {
+      window.location.reload();
+    }
     student && student.total && setStudentTotal(student.total);
   }, [student, studentTotal]);
 

@@ -26,6 +26,7 @@ function SessionsPage(props) {
                   onClick={e => {
                     window.deleteSession(session);
                     setSessions(window.getSessions());
+                    window.location.reload();
                   }}
                 />
               </p>

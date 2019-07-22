@@ -15,7 +15,8 @@ function ResultPage({ match }) {
   }, [params.regNo, params.session, student, student.session]);
 
   const handlePrint = e => {
-    window.printToPDF({ name: student.name, regNo: student.regNo });
+    // window.printToPDF({ name: student.name, regNo: student.regNo });
+    window.print()
   };
 
   return (
