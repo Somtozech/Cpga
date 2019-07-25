@@ -69,7 +69,7 @@ class Db {
   }
 
   read() {
-    return this.db.getState();
+    return this.db.read().getState();
   }
 
   deleteSession(session) {

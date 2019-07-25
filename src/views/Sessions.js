@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 function SessionsPage(props) {
   const [sessions, setSessions] = useState([]);
+  // const latestSessions = useRef(null);
 
   useEffect(() => {
     setSessions(window.getSessions());
-  }, [sessions, sessions.length]);
+    // latestSessions.current = sessions;
+  }, []);
 
   return (
     <div className="padded-more sessions">
@@ -26,7 +28,6 @@ function SessionsPage(props) {
                   onClick={e => {
                     window.deleteSession(session);
                     setSessions(window.getSessions());
-                    window.location.reload();
                   }}
                 />
               </p>

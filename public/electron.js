@@ -53,7 +53,7 @@ const createSession = (exports.createSession = session => {
  * Returns the dataStore current state
  */
 const getSessions = (exports.getSessions = () => {
-  return dataStore.db.getState();
+  return dataStore.read();
 });
 
 /**

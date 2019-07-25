@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Summary({ student }) {
-  const [studentTotal, setStudentTotal] = useState({
-    tcp: 0,
-    fcp: 0,
-    gp: 0
-  });
-
-  useEffect(() => {
-    if (!student && !student.total) {
-      window.location.reload();
-    }
-    student && student.total && setStudentTotal(student.total);
-  }, [student, studentTotal]);
-
+  console.log(student);
   return (
     <tbody>
       <tr>
@@ -51,17 +39,17 @@ function Summary({ student }) {
         <td style={{ border: 0 }} />
         <td>TOTAL</td>
         <td colSpan={2} className="text-center">
-          {studentTotal.tcp}
+          {student.total.tcp}
         </td>
         <td colSpan={2} className="text-center">
-          {studentTotal.fcp}
+          {student.total.fcp}
         </td>
       </tr>
       <tr style={{ fontWeight: 'bolder' }}>
         <td style={{ border: 0 }} height={30} />
         <td className="text-center f-18">FCGPA</td>
         <td colSpan={4} className="text-center f-18">
-          {studentTotal.gp}
+          {student.total.gp}
         </td>
       </tr>
     </tbody>

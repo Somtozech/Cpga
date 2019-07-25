@@ -12,11 +12,12 @@ function ResultPage({ match }) {
 
   useEffect(() => {
     setStudent(window.findStudentByRegNo(params.session, params.regNo));
-  }, [params.regNo, params.session, student, student.session]);
+    console.log(student);
+  }, [params.regNo, params.session, student]);
 
   const handlePrint = e => {
     // window.printToPDF({ name: student.name, regNo: student.regNo });
-    window.print()
+    window.print();
   };
 
   return (
