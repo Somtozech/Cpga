@@ -1,8 +1,8 @@
 {
-  "name": "cpga",
-  "version": "0.2.0",
+  "name": "transkript",
+  "version": "0.3.0",
   "private": true,
-  "description": "Cpga is a desktop application for calculating student's cpga",
+  "description": "Transkript  is a software application used for result processing and transcript generation",
   "author": "Ezechi Nnaemeka Somtochukwu",
   "main": "./public/electron.js",
   "homepage": ".",
@@ -18,8 +18,8 @@
     "xlsx": "^0.14.3"
   },
   "build": {
-    "appId": "com.electron.cpga",
-    "productName": "Cpga",
+    "appId": "com.electron.transkript",
+    "productName": "TRANSKRIPT",
     "copyright": "Copyright © 2019 Somtozech. All rights reserved",
     "win": {
       "target": "nsis",

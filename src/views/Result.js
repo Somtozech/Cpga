@@ -11,13 +11,12 @@ function ResultPage({ match }) {
   const url = match.url.replace('print', 'compute');
 
   useEffect(() => {
-    setStudent(window.findStudentByRegNo(params.session, params.regNo));
-    console.log(student);
-  }, [params.regNo, params.session, student]);
+    setStudent(window.getStudentInfoByRegNo(params.session, params.regNo));
+  }, [params.regNo, params.session]);
 
   const handlePrint = e => {
     // window.printToPDF({ name: student.name, regNo: student.regNo });
-    window.print();
+    return window.print();
   };
 
   return (
@@ -83,9 +82,7 @@ function ResultPage({ match }) {
           </table>
           <div className="d-flex summary-table">
             <div>
-              <table>
-                <Summary student={student} />
-              </table>
+              <table>{student ? <Summary student={student} /> : null}</table>
             </div>
             <div>
               <div className="d-flex">

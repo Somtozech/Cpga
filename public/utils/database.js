@@ -72,6 +72,30 @@ class Db {
     return this.db.read().getState();
   }
 
+  findStudentByRegNo(session, regNo) {
+    const student = this.db
+      .get(session)
+      .get('students')
+      .find({ regNo })
+      .value();
+    return student;
+  }
+
+  /**
+   * Unlike @function findStudentByRegNo this gets the latest student info from db
+   * @param {*} session
+   * @param {*} regNo
+   */
+  getStudentInfoByRegNo(session, regNo) {
+    const student = this.db
+      .read()
+      .get(session)
+      .get('students')
+      .find({ regNo })
+      .value();
+    return student;
+  }
+
   deleteSession(session) {
     return this.db.unset(session).write();
   }

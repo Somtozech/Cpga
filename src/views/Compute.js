@@ -26,7 +26,8 @@ function CreateSessionPage(props) {
     return () => {
       const scores = JSON.parse(localStorage.getItem('sessions'));
       if (scores && params.session && student.id) {
-       handleSave(null);
+        window.saveStudentsResult(params.session, student.id, scores);
+        localStorage.clear();
       }
     };
   }, [params.regNo, params.session, student]);

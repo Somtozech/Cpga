@@ -29,16 +29,17 @@ const createWindow = () => {
 };
 
 app.on('ready', () => {
+  // dataStore.addStudentToSession('2017-2018', {
+  //   name: 'Ezechi Nnaemeka',
+  //   regNo: '2015030171355',
+  //   mode_of_entry: 'UTME',
+  //   state: 'Enugu',
+  //   session: [],
+  //   id: 'okM1QbD5W'
+  // });
+  // const student = dataStore.findStudentByRegNo('2017-2018', '2015030171355');
+  // console.log(student);
   createWindow();
-
-  dataStore.addStudentToSession('2018-2019', {
-    name: 'Ezechi Nnaemeka',
-    regNo: '2015030171355',
-    mode_of_entry: 'UTME',
-    state: 'Enugu',
-    session: [],
-    id: 'okM1QbD5W'
-  });
 });
 
 /**
@@ -87,11 +88,14 @@ const getStudentsInSession = (exports.getStudentsInSession = session => {
 });
 
 const findStudentByRegNo = (exports.findStudentByRegNo = (session, regNo) => {
-  return dataStore.db
-    .get(session)
-    .get('students')
-    .find({ regNo })
-    .value();
+  return dataStore.findStudentByRegNo(session, regNo);
+});
+
+const getStudentInfoByRegNo = (exports.getStudentInfoByRegNo = (
+  session,
+  regNo
+) => {
+  return dataStore.getStudentInfoByRegNo(session, regNo);
 });
 
 const saveStudentsResult = (exports.saveStudentsResult = (

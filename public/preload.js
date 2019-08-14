@@ -23,3 +23,5 @@ window.saveStudentsResult = helpers.saveStudentsResult;
 window.printToPDF = helpers.printToPDF;
 
 window.deleteSession = helpers.deleteSession;
+
+window.getStudentInfoByRegNo = helpers.getStudentInfoByRegNo;
