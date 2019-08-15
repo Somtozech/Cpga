@@ -80,38 +80,47 @@ function ResultPage({ match }) {
               );
             })}
           </table>
-          <div className="d-flex summary-table">
-            <div>
-              <table>{student ? <Summary student={student} /> : null}</table>
+          {student && student.total ? (
+            <div className="d-flex summary-table">
+              <div>
+                <table>
+                  <Summary student={student} />}
+                </table>
+              </div>
+              <div>
+                <div className="d-flex">
+                  <h5>HOD: </h5>
+                  <hr
+                    className="flex mx-2"
+                    style={{ borderBottom: '1px dotted #000' }}
+                  />
+                </div>
+                <br />
+                <div className="d-flex">
+                  <h5>SIGNATURE: </h5>
+                  <hr
+                    className="flex mx-2"
+                    style={{ borderBottom: '1px dotted #000' }}
+                  />
+                </div>
+                <br />
+                <div className="d-flex">
+                  <h5>DATE: </h5>
+                  <hr
+                    className="flex mx-2"
+                    style={{ borderBottom: '1px dotted #000' }}
+                  />
+                </div>
+                <br />
+                <div className="text-bold">A=5,B=4,C=3,D=2,F=0</div>
+              </div>
             </div>
-            <div>
-              <div className="d-flex">
-                <h5>HOD: </h5>
-                <hr
-                  className="flex mx-2"
-                  style={{ borderBottom: '1px dotted #000' }}
-                />
-              </div>
-              <br />
-              <div className="d-flex">
-                <h5>SIGNATURE: </h5>
-                <hr
-                  className="flex mx-2"
-                  style={{ borderBottom: '1px dotted #000' }}
-                />
-              </div>
-              <br />
-              <div className="d-flex">
-                <h5>DATE: </h5>
-                <hr
-                  className="flex mx-2"
-                  style={{ borderBottom: '1px dotted #000' }}
-                />
-              </div>
-              <br />
-              <div className="text-bold">A=5,B=4,C=3,D=2,F=0</div>
+          ) : (
+            <div className="f-16 red-text">
+              No result has been uploaded. Kindly input student's result to see
+              transcript
             </div>
-          </div>
+          )}
         </div>
       ) : null}
     </div>

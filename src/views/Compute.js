@@ -111,31 +111,37 @@ function CreateSessionPage(props) {
       </div>
 
       <table className="table" ref={root}>
-        {sessions.map((session, i) => {
-          return (
-            <React.Fragment key={i}>
-              <thead>
-                <tr>
-                  <th colSpan="13" className="text-center">
-                    {String(session.year).toUpperCase()}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th colSpan="4">FIRST SEMESTER</th>
-                  <th colSpan="1" />
-                  <th colSpan="4">SECOND SEMESTER</th>
-                </tr>
-                <TableRow
-                  year={session}
-                  handleCellChange={handleCellChange(session.id)}
-                />
-                <tr style={{ height: 40 }} />
-              </tbody>
-            </React.Fragment>
-          );
-        })}
+        {sessions.length ? (
+          sessions.map((session, i) => {
+            return (
+              <React.Fragment key={i}>
+                <thead>
+                  <tr>
+                    <th colSpan="13" className="text-center">
+                      {String(session.year).toUpperCase()}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th colSpan="4">FIRST SEMESTER</th>
+                    <th colSpan="1" />
+                    <th colSpan="4">SECOND SEMESTER</th>
+                  </tr>
+                  <TableRow
+                    year={session}
+                    handleCellChange={handleCellChange(session.id)}
+                  />
+                  <tr style={{ height: 40 }} />
+                </tbody>
+              </React.Fragment>
+            );
+          })
+        ) : (
+          <div className="f-16 red-text">
+            Upload courses to input student's result
+          </div>
+        )}
       </table>
     </div>
   );
