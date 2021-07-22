@@ -15,7 +15,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "shortid": "^2.2.14",
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.17.0"
   },
   "build": {
     "appId": "com.electron.transkript",
